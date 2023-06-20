@@ -20,7 +20,6 @@
 
 
 
-
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -48,7 +47,20 @@ button:not(:disabled), summary {
 	--achtergrond:#eee;
 	--accent: #F3B103;
 	--accent2: #4554B4;
+	--text: #111;
 }
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--donker:#111;
+		--light: #eee;
+		--achtergrond: #4A4A4A;
+		--accent: #F3B103;
+		--accent2: #4554B4;
+		--text: #ffffff;
+	}
+}
+
 
 
 
@@ -78,6 +90,14 @@ button{
 	color: white;
 	font-family: "karla-light";
 	cursor: pointer;
+}
+
+h1, h2{
+	color: var(--text);
+	margin-bottom: .5em;
+	font-family: "karla";
+	letter-spacing: 3px;
+	font-size: clamp(.8em, 3vmin, 1.4em); 
 }
 
 /* header styling. De header heeft flex om het logo in het midden te plaatsen. */
@@ -110,12 +130,7 @@ section:nth-of-type(2n -1) div{
 	align-items: center;
 }
 
-h2:nth-of-type(1){
-	margin-bottom: .5em;
-	font-family: "karla";
-	letter-spacing: 3px;
-	font-size: 1em;
-}
+
 
 section:nth-of-type(1) div form {
 	display: flex;
@@ -174,8 +189,8 @@ section:nth-of-type(1) ul{
 	grid-row-gap: 1em;
 	/* https://codepen.io/thiagopiacentini/pen/YzpbdLr  grid clamp zodat het mooi in elkaar overloopt. */
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: clamp(1rem, 3vw, 10rem);
-  max-width: 100%
+  grid-gap: clamp(.5rem, 1vw, 3rem);
+  max-width: 100%;
 }
 
 /* Section 2 styling buttons vorige en volgende */
@@ -184,6 +199,10 @@ section:nth-of-type(2) button{
 	padding: .3em 0;
 	width: 7em;
 	margin: 0;
+}
+
+section:nth-of-type(2) button:active{
+	background-color: var();
 }
 
 section:nth-of-type(2) button:nth-of-type(2){
@@ -212,10 +231,47 @@ section:nth-of-type(3) ul{
 	gap: 20px;
 }
 
+
+@keyframes confetti{
+	0%{
+		border-color: #ff0099;
+		border: solid 3px;
+	}
+	13%{
+		border-color: #ff0000;
+	}
+	27%{
+		border-color: #ff6000;
+	}
+	40%{
+		border-color: #ffd800;
+	}
+	52%{
+		border-color: #6fe600;
+	}
+	65%{
+		border-color: #00e6ce;
+	}
+	82%{
+		border-color: #008cff;
+	}
+	100%{
+		border-color: #a000ff;
+		border: solid 3px;
+	}
+}
+
+section:nth-of-type(3) ul.confetti{
+	animation: confetti 1s infinite;
+	/* background: rgb(255,103,194); */
+	/* background: linear-gradient(170deg, rgba(255,103,194,1) 0%, rgba(255,0,0,1) 14%, rgba(255,96,0,1) 29%, rgba(255,216,0,1) 44%, rgba(111,230,0,1) 59%, rgba(0,230,206,1) 74%, rgba(0,140,255,1) 89%, rgba(160,0,255,1) 100%); */
+}
+
 section:nth-of-type(3) ul div p{
 	/* https://www.w3schools.com/cssref/pr_text_white-space.php */
 	overflow: hidden;
 	white-space: nowrap;
+	color: var(--text);
 }
 
 /* WAAROM WERKT DIT NIET???? */
@@ -252,6 +308,8 @@ section ul li div{
 section ul li div p{
 	font-size: .6em;
 	margin-top: 0;
+	color: var(--text);
+	font-family: 'karla-light';
 }
 
 /* cursor states voor alle list items */
@@ -265,6 +323,10 @@ li.sortable-ghost {
 }
 
 /* Section 4 styling button */
+
+section:nth-of-type(4){
+	margin-bottom: 5em;
+}
 
 section:nth-of-type(4) button:nth-of-type(1){
 	background-color: var(--accent);
@@ -295,6 +357,15 @@ section:nth-of-type(4) button:nth-of-type(2){
 		display: none;
 	}
 
+	section:first-of-type ul{
+		margin: 0;
+		padding-bottom: 2em;
+	}
+
+	section:nth-of-type(3) ul{
+		width: 70vw;
+	}
+
 }
 
 /* MEDIA QUERY DESKTOP */
@@ -312,10 +383,23 @@ section:nth-of-type(4) button:nth-of-type(2){
 		height: 250px
 	}
 
+	section:nth-of-type(3) ul{
+		width: 90vw;
+	}
+
+
 }
 
 
 .hide{
 	/* https://www.w3schools.com/css/css_important.asp */
 	display: none !important;
+}
+
+
+
+@media (prefers-reduced-motion: reduce){
+	section:nth-of-type(3) ul.confetti{
+		animation: confetti 1s infinite paused;
+	}
 }

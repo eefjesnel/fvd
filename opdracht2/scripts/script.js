@@ -24,7 +24,7 @@ new Sortable(kledingkast, {
     // Revert clone zodat het item ook weer terug geplaatst kan worden.
     revertClone: true, 
 	},
-  sort: false,
+  sort: true,
 	animation: 300,
 });
 
@@ -142,10 +142,13 @@ function kiesOutfit(){
   var sliderKnoppen = document.querySelector("section:nth-of-type(2)")
   var kiesOutfit = document.querySelector("section:nth-of-type(4) button:first-of-type")
   var wijzigOutfit = document.querySelector("section:nth-of-type(4) button:last-of-type")
+  var outfit = document.querySelector("section:nth-of-type(3) ul:last-of-type");
 
   kledingkast.classList.add('hide')
   sliderKnoppen.classList.add('hide')
   kiesOutfit.classList.add('hide')
+  outfit.classList.add('confetti')
+
   // button wijzig outfit toevoegen wanneer je op dit is mijn outfit klikt.
   wijzigOutfit.classList.remove('hide')
 }
@@ -155,10 +158,12 @@ function wijzigOutfit(){
   var sliderKnoppen = document.querySelector("section:nth-of-type(2)")
   var kiesOutfit = document.querySelector("section:nth-of-type(4) button:first-of-type")
   var wijzigOutfit = document.querySelector("section:nth-of-type(4) button:last-of-type")
+  var outfit = document.querySelector("section:nth-of-type(3) ul:last-of-type");
 
   kledingkast.classList.remove('hide')
   sliderKnoppen.classList.remove('hide')
   kiesOutfit.classList.remove('hide')
+  outfit.classList.remove('confetti')
   // button wijzig outfit toevoegen wanneer je op wijzig outfit klikt.
   wijzigOutfit.classList.add('hide')
 }
