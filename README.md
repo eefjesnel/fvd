@@ -155,7 +155,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   <br>
 
-  <img src="readme-images/enkerkey.png" width="375px" alt="druk op enter om je naam te kunnen invullen">
+  <img src="readme-images/enterkey.png" width="375px" alt="druk op enter om je naam te kunnen invullen">
 
   <br>
 
