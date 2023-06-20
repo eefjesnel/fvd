@@ -16,6 +16,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Bronnenlijst
   1. developer mazilla
   2. DLO
+  3. https://www.youtube.com/watch?v=y1LseZjSfRw voor het schrijven van for(var kledingstukInArray = 0; kledingstukInArray < kledingstukken.length; kledingstukInArray++)
+  4. https://www.codecademy.com/forum_questions/521be7a080ff33604400099 voor het begrijpen van punt 3.
+  5. https://www.youtube.com/watch?v=lNJMDTSkNXo en https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp om de value van het textfield in innerhtml om te zetten.
+  6. https://www.w3schools.com/cssref/pr_text_white-space.php voor het schrijven van overflow hidden, ik had dat niet bedacht.
+  7. https://codepen.io/thiagopiacentini/pen/YzpbdLr voor grid-gap clamp
+  8. https://www.w3schools.com/cssref/sel_nth-of-type.php en https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child om de juiste selectors te gebruiken.
 
 
 
