@@ -133,7 +133,7 @@ span:nth-of-type(5)::before, span:nth-of-type(5)::after, span:nth-of-type(7)::be
 }
 
 h1:hover span:nth-of-type(-n + 3){
-	animation: auto 5s linear 0s 1;
+	animation: auto 3s linear 0s 1;
 }
 
 /****************/
@@ -221,15 +221,15 @@ span:nth-of-type(4)::before{
 }
 
 h1:hover span:nth-of-type(4){
-	animation: band 5s linear 1;
+	animation: band 3s linear 1;
 }
 
 h1:hover span:nth-of-type(4)::before{
-	animation: wiel 5s ease-in-out .2s 1;
+	animation: wiel 3s ease-in-out .2s 1;
 }
 
 h1:hover span:nth-of-type(4)::after{
-	animation: wiel 5s ease-in-out .2s 1;
+	animation: wiel 3s ease-in-out .2s 1;
 }
 
 span:nth-of-type(4)::after{
@@ -336,7 +336,7 @@ span:nth-of-type(8)::before{
 }
 
 h1:hover span:nth-of-type(n + 5){
-	animation: disk 5s linear .1s 1;
+	animation: disk 3s linear .1s 1;
 }
 
 /****************/

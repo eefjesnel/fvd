@@ -50,6 +50,8 @@ button:not(:disabled), summary {
 	--text: #111;
 }
 
+/* THEMA DONKER */
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--donker:#111;
@@ -397,6 +399,9 @@ section:nth-of-type(4) button:nth-of-type(2){
 }
 
 
+
+
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce){
 	section:nth-of-type(3) ul.confetti{
